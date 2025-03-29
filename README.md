@@ -74,6 +74,9 @@ API Documentation: [IMDb Top 250 Movies API](https://rapidapi.com/octopusteam-oc
 
 ```sh
 git clone https://github.com/Tapiwanashe6/movie-recommender-app.git
+```
+
+```
 cd app
 ```
 
