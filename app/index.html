@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+    />
+    <link rel="stylesheet" href="style.css">
+    <title>Movie Recommnder</title>
+</head>
+<body>
+    <header>
+        <h1>Top Movie Recommendations</h1>
+        <nav>
+            <button onclick="sortMoviesByRating()">Sort by Rating</button>
+            <button onclick="sortMoviesByTitle()">Sort by Title</button>
+            <button onclick="sortMoviesByYear()">Sort by Year</button>
+            <button id="refreshButton">Refresh</button>
+        </nav>
+        <input type="text" id="searchInput" placeholder="Search movies...">
+    </header>
+
+    <div id="loadingSpinner"></div>
+
+    <div class="filters">
+        <div>
+            <h3>Filter by Genre</h3>
+            <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+                <label><input type="checkbox" value="Action" onchange="applyFilters()"> Action</label>
+                <label><input type="checkbox" value="Comedy" onchange="applyFilters()"> Comedy</label>
+                <label><input type="checkbox" value="Drama" onchange="applyFilters()"> Drama</label>
+                <label><input type="checkbox" value="Adventure" onchange="applyFilters()"> Adventure</label>
+            </div>
+        </div>
+        <div>
+            <h3>Filter by Year</h3>
+            <select id="yearFilter" onchange="applyFilters()">
+                <option value="">All Years</option>
+                <option value="1994">1994</option>
+                <option value="1974">1974</option>
+                <option value="1966">1966</option>
+                <option value="2008">2008</option>
+                <option value="1972">1972</option>
+                <option value="2002">2002</option>
+                <option value="1993">1993</option>
+                <option value="2001">2001</option>
+                <option value="2003">2003</option>
+                <option value="1957">1957</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="movies-container">
+        <div class="movies-error" id="error-message"></div>
+        <div class="movies"></div>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
