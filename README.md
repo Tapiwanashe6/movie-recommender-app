@@ -76,10 +76,6 @@ API Documentation: [IMDb Top 250 Movies API](https://rapidapi.com/octopusteam-oc
 git clone https://github.com/Tapiwanashe6/movie-recommender-app.git
 ```
 
-```
-cd app
-```
-
 ### Step 2: Open the Project
 
 Since this is a front-end application, simply open `index.html` in a browser.
